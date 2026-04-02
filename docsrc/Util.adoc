@@ -1,0 +1,138 @@
+== Util, the utilities module [[util-adoc]]
+
+The `Util` module holds various types and functions that are used throughout
+the application, typically refactored here after review to reduce weight in
+modules that require clarity.
+
+[source,elm]
+----
+<<util-module>>=
+module Util exposing (
+    <<util-exports>>
+    )
+----
+
+=== Direction
+
+(((Util,types,Direction)))
+
+[source,elm]
+----
+<<util-exports>>=
+Direction(..)
+----
+
+[source,elm]
+----
+<<util-types>>=
+type Direction
+    = Upstream
+    | Downstream
+----
+
+[source,elm]
+----
+<<util-exports>>=
+, toString
+----
+
+=== toString (from Direction)
+
+(((Util,)))
+
+[source,elm]
+----
+<<util-functions>>=
+toString : Direction -> String
+toString d =
+    case d of
+        Upstream ->
+            "Upstream"
+
+        Downstream ->
+            "Downstream"
+----
+
+=== Position [[util-position]]
+
+This XY record structure was being used in several places so it was refactored
+here.
+
+(((Util,types,Position)))
+
+[source,elm]
+----
+<<util-exports>>=
+, Position
+----
+
+[source,elm]
+----
+<<util-types>>=
+type alias Position =
+    { x : Float
+    , y : Float
+    }
+----
+
+=== newVesselName
+
+Make up a vessel name from Lorem Ipsum text. Not much to see here really, I
+just wanted something that would provide unique names. An index is tacked to
+the end just to make sure. Some care is taken to remove punctuation and, since
+its a boat title, capitalize the text.
+
+(((Util,functions,newVesselName)))
+
+[source,elm]
+----
+<<util-exports>>=
+, newVesselName
+----
+
+[source,elm]
+----
+<<util-imports>>=
+import Lorem
+import String.Extra
+----
+
+[source,elm]
+----
+<<util-functions>>=
+newVesselName : Int -> String
+newVesselName index =
+    let
+        nmax : Int
+        nmax = 50
+
+        n : Int
+        n = modBy nmax index
+
+        wordpair : List String
+        wordpair =
+            Lorem.words (nmax + 1)
+                |> List.drop n
+                |> List.take 2
+    in
+        List.singleton (String.fromInt index)
+        |> List.append wordpair
+        |> List.map (String.filter Char.isAlphaNum)
+        |> String.join " "
+        |> String.Extra.toTitleCase
+----
+
+
+=== Code Layout
+
+[source,elm]
+----
+<<Util.elm>>=
+<<util-module>>
+
+<<util-imports>>
+
+<<util-types>>
+
+<<util-functions>>
+----

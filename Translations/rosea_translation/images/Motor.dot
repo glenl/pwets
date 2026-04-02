@@ -1,0 +1,14 @@
+digraph Motor {
+    rankdir=LR;
+    node[shape=box, style=filled, fillcolor=yellow]
+    init [label="", shape=circle, fillcolor=black width=0.15]
+    init -> In
+
+    In -> Running_Out [label=run_out]
+
+    Running_Out -> Out[label=extent_reached]
+
+    Out -> Running_In [label=run_in]
+
+    Running_In -> In [label=extent_reached]
+}

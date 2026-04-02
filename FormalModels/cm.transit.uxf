@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+// fontsize=14
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+fontfamily=Monospaced
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+</help_text>
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>500</y>
+      <w>180</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Passage *
+--
+vessGrpId::Id {I,R1}
+laneId::Id {I,R1}
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1540</x>
+      <y>870</y>
+      <w>270</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=*+*
+r2=holds a sequence of
+</panel_attributes>
+    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>240</x>
+      <y>510</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R1
+lw=0.05
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1510</x>
+      <y>870</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R2
+lw=0.05
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1470</x>
+      <y>590</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1490</x>
+      <y>690</y>
+      <w>230</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1460</x>
+      <y>690</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R12
+lw=0.05</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1360</x>
+      <y>690</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1360</x>
+      <y>410</y>
+      <w>260</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>*GateInLane*
+--
+laneId::Id {I,R2}
+position::Ord {I}
+gateId::Id {I2,R2}
+capacity::EF
+--
+nextGateInLane
+    ( direction::UD
+    , gateInLane::GateInLane
+    ) ::GateInLane
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1700</x>
+      <y>690</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*FurtherUpstream*
+--
+laneId::Id {I,R12}
+position::Ord {I,R12}
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1790</x>
+      <y>370</y>
+      <w>80</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*1*
+r1=follows
+
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1780</x>
+      <y>540</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R13
+lw=0.05
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1610</x>
+      <y>140</y>
+      <w>370</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=*?*
+
+r2=is crossing
+
+</panel_attributes>
+    <additional_attributes>350.0;10.0;350.0;340.0;10.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1940</x>
+      <y>110</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R6
+lw=0.05
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1090</x>
+      <y>120</y>
+      <w>870</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>13.0;10.0;850.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>140</y>
+      <w>180</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*1*
+r1=
+
+
+
+
+
+
+
+
+
+
+
+
+
+is being 
+encountered during
+
+</panel_attributes>
+    <additional_attributes>10.0;360.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>450</x>
+      <y>110</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R7
+lw=0.05
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>110</y>
+      <w>430</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*?*
+r1=
+is currently
+encountering
+
+</panel_attributes>
+    <additional_attributes>410.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>80</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*ActiveGateCrossing*
+--
+vessGrpId::Id {I,R6,R7}
+laneId::Id {I,R6,R7}
+position::Ord {I,R6}
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>0</y>
+      <w>240</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*VesselGroup*
+--
+vessGrpId::Id {I}
+direction::UD
+isAwaitingAssignment::Bool
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>30</y>
+      <w>1580</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*?*
+r1=
+  is being 
+  crossed by</panel_attributes>
+    <additional_attributes>10.0;20.0;1560.0;20.0;1560.0;83.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1020</x>
+      <y>300</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R4
+lw=0.05
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1790</x>
+      <y>570</y>
+      <w>90</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=*1*
+r2=precedes
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1180</x>
+      <y>690</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*LowerEntry*
+--
+laneId::Id {I,R12}
+position::Ord {I,R12}
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>250</x>
+      <y>540</y>
+      <w>110</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=*?*
+r2=
+is sailing
+through</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>80</y>
+      <w>130</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*?*
+r1=is carrying</panel_attributes>
+    <additional_attributes>19.0;10.0;20.0;430.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>850</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*TransitLane*
+--
+laneId::Id {I}
+isAvailable::Bool
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1790</x>
+      <y>840</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Gate*
+--
+gateId::Id {I}
+culvertId::Id {G2}
+valign=top
+//style=autoresize
+bg=#8888ff</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1490</x>
+      <y>320</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1510</x>
+      <y>290</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1480</x>
+      <y>290</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R11
+lw=0.05</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1360</x>
+      <y>290</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1700</x>
+      <y>290</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*FurtherDownstream*
+--
+laneId::Id {I,R11,R13}
+position::Ord {I,R11}
+nextPos::Ord {R13}
+valign=top
+style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1180</x>
+      <y>290</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*UpperEntry*
+--
+laneId::Id {I,R11}
+position::Ord {I,R11}
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>520</y>
+      <w>130</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>680</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*Upstream*
+--
+vessGrpId::Id {I,R3}
+laneId::Id {I,R3,R5}
+entryPos::Ord {R5}
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>540</y>
+      <w>30</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>720</x>
+      <y>510</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R3
+lw=0.05
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>380</y>
+      <w>30</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>520</y>
+      <w>190</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1050</x>
+      <y>300</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*1*
+r1=
+starts 
+with</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1020</x>
+      <y>690</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R5
+lw=0.05
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1050</x>
+      <y>690</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*1*
+r1=
+starts 
+with</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>690</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*?*
+r1=
+is the
+beginning of
+
+</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>870</y>
+      <w>1180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=is installed in
+m1=*1*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;1160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>300</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*?*
+r1=
+is the
+beginning of
+
+</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>300</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*Downstream*
+--
+vessGrpId::Id {I,R3}
+laneId::Id {I,R3,R4}
+entryPos::Ord {R4}
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1520</x>
+      <y>590</y>
+      <w>30</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,81 @@
+extends: default-sans-with-font-fallbacks
+font:
+  catalog:
+    merge: true
+    DejaVu Sans:
+      normal: /usr/share/fonts/TTF/DejaVuSans.ttf
+      italic: /usr/share/fonts/TTF/DejaVuSans-Oblique.ttf
+      bold: /usr/share/fonts/TTF/DejaVuSans-Bold.ttf
+      bold_italic: /usr/share/fonts/TTF/DejaVuSans-BoldOblique.ttf
+    DejaVu Sans Mono:
+      normal: /usr/share/fonts/TTF/DejaVuSansMono.ttf
+      italic: /usr/share/fonts/TTF/DejaVuSansMono-Oblique.ttf
+      bold: /usr/share/fonts/TTF/DejaVuSansMono-Bold.ttf
+      bold_italic: /usr/share/fonts/TTF/DejaVuSansMono-BoldOblique.ttf
+    DejaVu Sans ExtraLight: /usr/share/fonts/TTF/DejaVuSans-ExtraLight.ttf
+
+page:
+  size: Letter
+  margin: [72, 72, 72, 72]
+
+title-page:
+  font-family: DejaVu Sans
+  font-color: #0d0f82
+  title:
+    font-family: DejaVu Sans
+    font-color: #0d0f82
+  subtitle:
+    font-family: DejaVu Sans
+    font-color: #0d0f82
+    font-style: italic
+  authors:
+    font-family: DejaVu Sans
+    font-color: #0d0f82
+
+base:
+  font-family: DejaVu Sans
+  font-size: 10
+
+code:
+  font-family: DejaVu Sans Mono
+  font-size: 9
+  border-width: 0.75
+  border-color: #107980
+
+codespan:
+  font-family: DejaVu Sans Mono
+  font-color: #000000
+  font-size: 1.0em
+
+heading:
+  font-family: DejaVu Sans ExtraLight
+  font-color: #0d0f82
+
+link:
+  font-color: #428BCA
+  font-family: DejaVu Sans
+
+table:
+  background-color: #ecf8fc
+  border-color: #0d0f82
+  grid-color: #0d0f82
+
+image:
+  width: 100%
+  caption:
+    align: inherit
+    text-align: center
+
+footer:
+  height: 0.75in
+  line-height: 1
+  recto:
+    left:
+      content: 'wetsim / {revnumber} / {revdate}'
+    right:
+      content: '*{chapter-title}* | {page-number} of {page-count}'
+  verso:
+    right:
+      content: $footer-recto-left-content
+    left:
+      content: $footer-recto-right-content

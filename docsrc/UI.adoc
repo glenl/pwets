@@ -1,0 +1,353 @@
+== UI helper functions [[ui-adoc]]
+
+This module contains miscellaneous functions graphical elements of the UI. It
+is broken into two parts,
+
+. <<ui-theming,Theming>>, guiding the overall look.
+  * <<ui-typescale,typescale>>
+  * <<ui-theme,theme>>
+  * <<ui-layout,layout>>
+. <<ui-lock-graphics,Lock Graphics>>, animated glyphs.
+  * <<ui-vane,vane>>
+  * <<ui-hub,hub>>
+  * <<ui-gate,gate>>
+  * <<ui-chamber,chamber>>
+  * <<ui-vessel,vessel>>
+
+(((chunks,UI,skyKeyColors)))
+
+[source,elm]
+----
+<<ui-imports>>=
+import Angle
+import Color
+import OUI.Material.Color as Color
+import OUI.Material.Theme as Theme
+import Util
+----
+
+=== Theming [[ui-theming]]
+
+==== typescale [[ui-typescale]]
+
+About the only reason this is modified is to set the _hero_ font for the UI.
+The chosen font needs some supporting code in the `index.html` file.
+
+(((chunks,UI,typescale)))
+
+[source,elm]
+----
+<<ui-functions>>=
+typescale : Theme.Typescale
+typescale =
+    let
+        base =
+            Theme.defaultTypescale
+
+        display =
+            base.display
+
+        displayMedium =
+            display.medium
+    in
+    { base
+        | display =
+            { display
+                | medium =
+                    { displayMedium
+                        | font = "Expletus sans"
+                    }
+            }
+    }
+----
+
+
+==== theme [[ui-theme]]
+
+[source,elm]
+----
+<<ui-exports>>=
+theme
+----
+
+Besides the `Typescale` all we're doing here is selecting a base color scheme
+for the material look.
+
+(((chunks,UI,theme)))
+
+[source,elm]
+----
+<<ui-functions>>=
+theme : Theme.Theme ()
+theme =
+    Theme.defaultTheme
+        |> Theme.withTypescale typescale
+        |> Theme.withColorscheme Color.defaultDarkScheme
+----
+
+==== layout [[ui-layout]]
+
+[source,elm]
+----
+<<ui-exports>>=
+, layout
+----
+
+The layout sets up the overall color and options of the UI. The `focusStyle`
+is _disappeared_ so as to not interfere with the material look.
+
+[source,elm]
+----
+<<ui-imports>>=
+import Element as E
+import Element.Background as Background
+import Element.Font as Font
+import Html exposing (Html)
+import Html.Attributes
+----
+
+(((chunks,UI,layout)))
+
+[source,elm]
+----
+<<ui-functions>>=
+layout : E.Element msg -> Html msg
+layout =
+    let
+        scheme : Color.Scheme
+        scheme =
+            Theme.colorscheme theme
+    in
+    E.layoutWith
+        { options =
+            [ E.focusStyle
+                { borderColor = Nothing
+                , backgroundColor = Nothing
+                , shadow = Nothing
+                }
+            ]
+        }
+        [ E.height E.fill
+        , E.width E.fill
+        , Background.color <| Color.toElementColor scheme.surface
+        , Font.color <| Color.toElementColor scheme.onSurface
+        , E.htmlAttribute <|
+            Html.Attributes.style "-webkit-tap-highlight-color" "transparent"
+        ]
+----
+
+=== Lock graphics [[ui-lock-graphics]]
+
+[source,elm]
+----
+<<ui-imports>>=
+import Svg exposing (Svg)
+import Svg.Attributes as SvgA
+----
+
+==== vane [[ui-vane]]
+
+[source,elm]
+----
+<<ui-exports>>=
+, vane
+----
+
+This glyph represents the _paddles_ of a valve that can be rotated in any
+direction around the center. It is a `polyline` that uses a transform to do
+the heavy lifting.
+
+(((chunks,UI,vane)))
+
+[source,elm]
+----
+<<ui-functions>>=
+vane : Int -> Int -> Float -> Svg msg
+vane x y radians =
+    let
+        xForm : String
+        xForm =
+            [ "translate ("
+            , String.fromInt x
+            , " "
+            , String.fromInt y
+            , ") rotate ("
+            , String.fromInt
+                <| round <| Angle.inDegrees <| Angle.radians radians
+            , ")"
+            ] |> String.concat
+    in
+    Svg.g
+        [ SvgA.transform xForm
+        ]
+        [ Svg.polyline
+            [ SvgA.points "0 20 0 -20"
+            , SvgA.strokeWidth "4"
+            , SvgA.stroke <| Color.toCssString Color.darkPurple
+            ]
+            []
+        ]
+----
+
+==== hub [[ui-hub]]
+
+[source,elm]
+----
+<<ui-exports>>=
+, hub
+----
+
+This is the center of the _valve_ and isn't meant to animate.
+
+(((chunks,UI,hub)))
+
+[source,elm]
+----
+<<ui-functions>>=
+hub : Int -> Int -> Svg msg
+hub x y =
+    Svg.circle
+        [ SvgA.cx <| String.fromInt x
+        , SvgA.cy <| String.fromInt y
+        , SvgA.r "6"
+        , SvgA.fill <| Color.toCssString Color.darkPurple
+        ]
+        []
+----
+
+==== chamber [[ui-chamber]]
+
+[source,elm]
+----
+<<ui-exports>>=
+, chamber
+----
+
+A _chamber_ is an enclosed body of water represented by a rectangle. To
+achieve animation the _depth_ parameter is used to vary the height.
+
+(((chunks,UI,chamber)))
+
+[source,elm]
+----
+<<ui-functions>>=
+chamber : Int -> Int -> Int -> Svg msg
+chamber width xoffset depth =
+    Svg.rect
+        [ SvgA.width <| String.fromInt width
+        , SvgA.height <| String.fromInt <| 200 - depth
+        , SvgA.x <| String.fromInt xoffset
+        , SvgA.y <| String.fromInt depth
+        , SvgA.fill <| Color.toCssString Color.lightBlue
+        ]
+        []
+----
+
+==== gate [[ui-gate]]
+
+[source,elm]
+----
+<<ui-exports>>=
+, gate
+----
+
+A gate is represented by a rectangle and allows the opacity to be passed in as
+a parameter so it can be animated externally.
+
+(((chunks,UI,gate)))
+
+[source,elm]
+----
+<<ui-functions>>=
+gate : Int -> Int -> Int -> Float -> Svg msg
+gate x y height opacity =
+    Svg.rect
+        [ SvgA.width "12"
+        , SvgA.height <| String.fromInt height
+        , SvgA.x <| String.fromInt x
+        , SvgA.y <| String.fromInt y
+        , SvgA.fill <| Color.toCssString Color.darkBlue
+        , SvgA.stroke <| Color.toCssString Color.darkBlue
+        , SvgA.fillOpacity <| String.fromFloat opacity
+        ]
+        []
+----
+
+==== vessel [[ui-vessel]]
+
+[source,elm]
+----
+<<ui-exports>>=
+, vessel
+----
+
+A vessel is depicted as a simple triangle pointing either east or west to
+describe its up- or down- stream direction.
+It was done this way out of worry that something more elaborate might be too
+heavy for animation but it represents the look nicely. It is not fully opaque
+so that passing vessels appear to pass through each other.
+
+The vessel license is annotated below the vessel. There is only a vague effort
+to center the text.
+
+(((chunks,UI,vessel)))
+
+[source,elm]
+----
+<<ui-functions>>=
+vessel : String -> Util.Direction -> Util.Position -> Svg msg
+vessel name direction pos =
+    let
+        xForm : String
+        xForm =
+            [ "translate ("
+            , String.fromInt <| round <| pos.x - 12
+            , " "
+            , String.fromInt <| round <| pos.y - 12
+            , ")"
+            ] |> String.concat
+
+        points : String
+        points =
+            case direction of
+                Util.Downstream ->
+                    "2,2 22,12 2,22"
+
+                Util.Upstream ->
+                    "22,2 2,12 22,22"
+    in
+    Svg.g
+        [ SvgA.transform xForm
+        ]
+        [ Svg.polygon
+            [ SvgA.points points
+            , SvgA.fill <| Color.toCssString Color.darkGreen
+            , SvgA.fillOpacity ".8"
+            ]
+            []
+        , Svg.text_
+            [ SvgA.y "45"
+            , SvgA.x "-24"
+            , SvgA.fill <| Color.toCssString Color.yellow
+            , SvgA.fontSize ".6em"
+            ]
+            [ Svg.text name
+            ]
+        ]
+----
+
+=== Code Layout
+
+
+(((chunks,UI,UI.elm)))
+
+[source,elm ]
+----
+<<UI.elm>>=
+module UI exposing
+  (
+  <<ui-exports>>
+  )
+<<ui-imports>>
+<<ui-functions>>
+----

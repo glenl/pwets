@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>270</y>
+      <w>240</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*VesselGroup*
+--
+vessGrpId::Id {I}
+direction::UD
+isAwaitingAssignment::Bool
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>300</y>
+      <w>1210</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*?*
+r1=
+is being 
+crossed by</panel_attributes>
+    <additional_attributes>10.0;20.0;1190.0;20.0;1190.0;143.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1540</x>
+      <y>470</y>
+      <w>470</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=*?*
+
+r2=is crossing
+
+</panel_attributes>
+    <additional_attributes>450.0;10.0;450.0;340.0;10.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1970</x>
+      <y>440</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R6
+lw=0.05
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1510</x>
+      <y>450</y>
+      <w>480</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>13.0;10.0;460.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1310</x>
+      <y>410</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*ActiveGateCrossing*
+--
+vessGrpId::Id {I,R6,R7}
+laneId::Id {I,R6,R7}
+position::Ord {I,R6}
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>830</y>
+      <w>180</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Passage *
+--
+vessGrpId::Id {I,R1}
+laneId::Id {I,R1}
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>970</x>
+      <y>470</y>
+      <w>180</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*1*
+r1=
+
+
+
+
+
+
+
+
+
+
+
+
+
+is being 
+encountered during
+
+</panel_attributes>
+    <additional_attributes>10.0;360.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>440</y>
+      <w>340</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*?*
+r1=
+is currently
+encountering
+
+</panel_attributes>
+    <additional_attributes>320.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>960</x>
+      <y>440</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R7
+lw=0.05
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1290</x>
+      <y>720</y>
+      <w>260</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>*GateInLane*
+--
+laneId::Id {I,R2}
+position::Ord {I}
+gateId::Id {I2,R2}
+capacity::EF
+inService::Bool
+--
+nextGateInLane
+    ( direction::UD
+    , gateInLane::GateInLane
+    ) ::GateInLane
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

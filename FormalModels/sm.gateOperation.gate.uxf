@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>20</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1720</x>
+      <y>620</y>
+      <w>120</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*4.Open*
+
+valign=top
+style=autoresize
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>220</x>
+      <y>240</y>
+      <w>160</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>*1.Closed*
+
+
+valign=top
+style=autoresize
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>220</x>
+      <y>640</y>
+      <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*5.Closing*
+
+valign=top
+style=autoresize
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>900</x>
+      <y>240</y>
+      <w>320</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*2.PreparingToOpen*
+
+valign=top
+style=autoresize
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>640</y>
+      <w>1380</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+closeGateRequested</panel_attributes>
+    <additional_attributes>670.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>260</y>
+      <w>580</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+openGateRequested</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>340</y>
+      <w>300</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+closureComplete</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1760</x>
+      <y>320</y>
+      <w>300</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+openingComplete</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1200</x>
+      <y>260</y>
+      <w>520</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+equalizationAchieved</panel_attributes>
+    <additional_attributes>240.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1680</x>
+      <y>240</y>
+      <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*3.Opening*
+
+valign=top
+style=autoresize
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,5 @@
+digraph WETS_System_Domains {
+    node[style=filled, fillcolor=yellow]
+
+    "WETS" -> "Mechanical\nManagement"
+}

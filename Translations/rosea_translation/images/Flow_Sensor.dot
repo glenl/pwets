@@ -1,0 +1,10 @@
+digraph Flow_Sensor {
+    rankdir=LR;
+    node[shape=box, style=filled, fillcolor=yellow]
+    init [label="", shape=circle, fillcolor=black width=0.15]
+    init -> Idle
+
+    Idle -> Sensing [label=monitor]
+
+    Sensing -> Idle[label=flow_zero]
+}

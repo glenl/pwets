@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1360</x>
+      <y>440</y>
+      <w>270</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=*+*
+r2=holds a sequence of
+</panel_attributes>
+    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1330</x>
+      <y>440</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R2
+lw=0.05
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>420</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*TransitLane*
+--
+laneId::Id {I}
+isAvailable::Bool
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1610</x>
+      <y>410</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Gate*
+--
+gateId::Id {I}
+culvertId::Id {G2}
+valign=top
+//style=autoresize
+bg=#8888ff</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>440</y>
+      <w>520</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=is installed in
+m1=*1*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;500.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1340</x>
+      <y>280</y>
+      <w>30</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1210</x>
+      <y>100</y>
+      <w>260</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>*GateInLane*
+--
+laneId::Id {I,R2}
+position::Ord {I}
+gateId::Id {I2,R2}
+capacity::EF
+inService::Bool
+--
+nextGateInLane
+    ( direction::UD
+    , gateInLane::GateInLane
+    ) ::GateInLane
+valign=top
+//style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

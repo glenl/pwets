@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>15</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1665</x>
+      <y>765</y>
+      <w>270</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>*1.WaitingForOpenGate*
+
+valign=top
+style=autoresize
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>2445</x>
+      <y>765</y>
+      <w>195</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>*2.CrossingGate*
+
+valign=top
+style=autoresize
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1920</x>
+      <y>765</y>
+      <w>555</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+clearedToCrossGate</panel_attributes>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1710</x>
+      <y>1035</y>
+      <w>150</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>*3.Mooring*
+
+valign=top
+style=autoresize
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1845</x>
+      <y>825</y>
+      <w>720</w>
+      <h>285</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lockRequested</panel_attributes>
+    <additional_attributes>10.0;170.0;460.0;170.0;460.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1770</x>
+      <y>825</y>
+      <w>300</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+clearedToApproachGate</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1665</x>
+      <y>675</y>
+      <w>285</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+clearedToApproachGate</panel_attributes>
+    <additional_attributes>20.0;60.0;20.0;20.0;160.0;20.0;160.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>120</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>*1.Locked*
+--
+
+
+valign=top
+style=autoresize
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>705</x>
+      <y>0</y>
+      <w>195</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>*2.Unlocked*
+--
+vesselUnlocked
+
+
+valign=top
+style=autoresize
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>105</x>
+      <y>0</y>
+      <w>630</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+releaseRequested</panel_attributes>
+    <additional_attributes>400.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>105</x>
+      <y>45</y>
+      <w>630</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lockRequested</panel_attributes>
+    <additional_attributes>10.0;20.0;400.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>705</x>
+      <y>300</y>
+      <w>195</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>*2.Sailing*
+--
+vesselUnlocked
+
+
+valign=top
+style=autoresize
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

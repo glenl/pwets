@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>790</x>
+      <y>460</y>
+      <w>150</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Passage *
+--
+vessGrpId :: Id {I,R1}
+laneId    :: Id {I,R1}
+valign=top
+style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>650</x>
+      <y>470</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>R1
+lw=0.05
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>260</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*VesselGroup*
+--
+vessGrpId::Id {I}
+direction::UD
+isAwaitingAssignment::Bool
+valign=top
+style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>500</y>
+      <w>80</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=*?*
+r2=
+is sailing
+through</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>340</y>
+      <w>100</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*?*
+r1=is carrying</panel_attributes>
+    <additional_attributes>19.0;10.0;20.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>580</x>
+      <y>620</y>
+      <w>120</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*TransitLane*
+--
+laneId::Id {I}
+isAvailable::Bool
+valign=top
+style=autoresize
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>480</y>
+      <w>130</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
