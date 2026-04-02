@@ -6,3 +6,4 @@ doc/.asciidoctor
 doc/pwets-elm.html
 doc/pwets-elm.pdf
 images/diag-pikchr-*
+site/elm.js
