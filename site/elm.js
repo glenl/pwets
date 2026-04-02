@@ -5741,7 +5741,7 @@ var $orus_io$elm_nats$Nats$init = F2(
 			a1: $elm$core$Maybe$Nothing,
 			e0: inboxPrefix + '.',
 			fl: nuid,
-			Q: $orus_io$elm_nats$Nats$Internal$SocketStateCollection$empty,
+			R: $orus_io$elm_nats$Nats$Internal$SocketStateCollection$empty,
 			h6: $elm$time$Time$posixToMillis(now)
 		};
 	});
@@ -5768,7 +5768,7 @@ var $author$project$Main$init = function (flags) {
 		$elm$time$Time$millisToPosix(flags.fk));
 	return _Utils_Tuple2(
 		{
-			S: _List_Nil,
+			L: _List_Nil,
 			aL: $mdgriffith$elm_animator$Animator$init(
 				$elm$core$Dict$fromList(
 					_List_fromArray(
@@ -10394,7 +10394,7 @@ var $elm$core$String$concat = function (strings) {
 var $mdgriffith$elm_ui$Internal$Style$Intermediate = $elm$core$Basics$identity;
 var $mdgriffith$elm_ui$Internal$Style$emptyIntermediate = F2(
 	function (selector, closing) {
-		return {dA: closing, N: _List_Nil, a7: _List_Nil, aH: selector};
+		return {dA: closing, O: _List_Nil, a7: _List_Nil, aH: selector};
 	});
 var $mdgriffith$elm_ui$Internal$Style$renderRules = F2(
 	function (_v0, rulesToRender) {
@@ -10421,10 +10421,10 @@ var $mdgriffith$elm_ui$Internal$Style$renderRules = F2(
 						return _Utils_update(
 							rendered,
 							{
-								N: A2(
+								O: A2(
 									$elm$core$List$cons,
-									{dA: '\n}', N: _List_Nil, a7: props, aH: '@supports (' + (prop + (':' + (value + (') {' + parent.aH))))},
-									rendered.N)
+									{dA: '\n}', O: _List_Nil, a7: props, aH: '@supports (' + (prop + (':' + (value + (') {' + parent.aH))))},
+									rendered.O)
 							});
 					case 5:
 						var selector = rule.a;
@@ -10432,13 +10432,13 @@ var $mdgriffith$elm_ui$Internal$Style$renderRules = F2(
 						return _Utils_update(
 							rendered,
 							{
-								N: A2(
+								O: A2(
 									$elm$core$List$cons,
 									A2(
 										$mdgriffith$elm_ui$Internal$Style$renderRules,
 										A2($mdgriffith$elm_ui$Internal$Style$emptyIntermediate, parent.aH + (' + ' + selector), ''),
 										adjRules),
-									rendered.N)
+									rendered.O)
 							});
 					case 1:
 						var child = rule.a;
@@ -10446,13 +10446,13 @@ var $mdgriffith$elm_ui$Internal$Style$renderRules = F2(
 						return _Utils_update(
 							rendered,
 							{
-								N: A2(
+								O: A2(
 									$elm$core$List$cons,
 									A2(
 										$mdgriffith$elm_ui$Internal$Style$renderRules,
 										A2($mdgriffith$elm_ui$Internal$Style$emptyIntermediate, parent.aH + (' > ' + child), ''),
 										childRules),
-									rendered.N)
+									rendered.O)
 							});
 					case 2:
 						var child = rule.a;
@@ -10460,13 +10460,13 @@ var $mdgriffith$elm_ui$Internal$Style$renderRules = F2(
 						return _Utils_update(
 							rendered,
 							{
-								N: A2(
+								O: A2(
 									$elm$core$List$cons,
 									A2(
 										$mdgriffith$elm_ui$Internal$Style$renderRules,
 										A2($mdgriffith$elm_ui$Internal$Style$emptyIntermediate, parent.aH + (' ' + child), ''),
 										childRules),
-									rendered.N)
+									rendered.O)
 							});
 					case 4:
 						var descriptor = rule.a;
@@ -10474,7 +10474,7 @@ var $mdgriffith$elm_ui$Internal$Style$renderRules = F2(
 						return _Utils_update(
 							rendered,
 							{
-								N: A2(
+								O: A2(
 									$elm$core$List$cons,
 									A2(
 										$mdgriffith$elm_ui$Internal$Style$renderRules,
@@ -10483,20 +10483,20 @@ var $mdgriffith$elm_ui$Internal$Style$renderRules = F2(
 											_Utils_ap(parent.aH, descriptor),
 											''),
 										descriptorRules),
-									rendered.N)
+									rendered.O)
 							});
 					default:
 						var batched = rule.a;
 						return _Utils_update(
 							rendered,
 							{
-								N: A2(
+								O: A2(
 									$elm$core$List$cons,
 									A2(
 										$mdgriffith$elm_ui$Internal$Style$renderRules,
 										A2($mdgriffith$elm_ui$Internal$Style$emptyIntermediate, parent.aH, ''),
 										batched),
-									rendered.N)
+									rendered.O)
 							});
 				}
 			});
@@ -10527,7 +10527,7 @@ var $mdgriffith$elm_ui$Internal$Style$renderCompact = function (styleClasses) {
 		return _Utils_ap(
 			renderClass(rule),
 			$elm$core$String$concat(
-				A2($elm$core$List$map, renderIntermediate, rule.N)));
+				A2($elm$core$List$map, renderIntermediate, rule.O)));
 	};
 	return $elm$core$String$concat(
 		A2(
@@ -14302,29 +14302,29 @@ var $orus_io$elm_orus_ui$OUI$Material$TextField$defaultTheme = {
 };
 var $orus_io$elm_orus_ui$OUI$Material$Theme$defaultTypescale = {
 	iS: {
-		au: {jx: 'Roboto', j0: 24, bp: 16, R: 0.5, cc: 400},
-		hb: {jx: 'Roboto', j0: 20, bp: 14, R: 0.25, cc: 400},
-		b3: {jx: 'Roboto', j0: 16, bp: 12, R: 0.4, cc: 400}
+		au: {jx: 'Roboto', j0: 24, bp: 16, S: 0.5, cc: 400},
+		hb: {jx: 'Roboto', j0: 20, bp: 14, S: 0.25, cc: 400},
+		b3: {jx: 'Roboto', j0: 16, bp: 12, S: 0.4, cc: 400}
 	},
 	gA: {
-		au: {jx: 'Roboto', j0: 54, bp: 47, R: -0.125, cc: 400},
-		hb: {jx: 'Roboto', j0: 53, bp: 45, R: 0, cc: 400},
-		b3: {jx: 'Roboto', j0: 44, bp: 36, R: 0, cc: 400}
+		au: {jx: 'Roboto', j0: 54, bp: 47, S: -0.125, cc: 400},
+		hb: {jx: 'Roboto', j0: 53, bp: 45, S: 0, cc: 400},
+		b3: {jx: 'Roboto', j0: 44, bp: 36, S: 0, cc: 400}
 	},
 	gO: {
-		au: {jx: 'Roboto', j0: 40, bp: 32, R: 0, cc: 400},
-		hb: {jx: 'Roboto', j0: 36, bp: 28, R: 0, cc: 400},
-		b3: {jx: 'Roboto', j0: 32, bp: 24, R: 0, cc: 400}
+		au: {jx: 'Roboto', j0: 40, bp: 32, S: 0, cc: 400},
+		hb: {jx: 'Roboto', j0: 36, bp: 28, S: 0, cc: 400},
+		b3: {jx: 'Roboto', j0: 32, bp: 24, S: 0, cc: 400}
 	},
 	bO: {
-		au: {jx: 'Roboto', j0: 20, bp: 14, R: 0.1, cc: 500},
-		hb: {jx: 'Roboto', j0: 16, bp: 12, R: 0.5, cc: 500},
-		b3: {jx: 'Roboto', j0: 16, bp: 11, R: 0.5, cc: 500}
+		au: {jx: 'Roboto', j0: 20, bp: 14, S: 0.1, cc: 500},
+		hb: {jx: 'Roboto', j0: 16, bp: 12, S: 0.5, cc: 500},
+		b3: {jx: 'Roboto', j0: 16, bp: 11, S: 0.5, cc: 500}
 	},
 	lo: {
-		au: {jx: 'Roboto', j0: 26, bp: 22, R: 0, cc: 400},
-		hb: {jx: 'Roboto', j0: 24, bp: 16, R: 0.15, cc: 500},
-		b3: {jx: 'Roboto', j0: 20, bp: 14, R: 0.1, cc: 500}
+		au: {jx: 'Roboto', j0: 26, bp: 22, S: 0, cc: 400},
+		hb: {jx: 'Roboto', j0: 24, bp: 16, S: 0.15, cc: 500},
+		b3: {jx: 'Roboto', j0: 20, bp: 14, S: 0.1, cc: 500}
 	}
 };
 var $orus_io$elm_orus_ui$OUI$Material$Theme$defaultTheme = {iN: $orus_io$elm_orus_ui$OUI$Material$Badge$defaultTheme, go: $orus_io$elm_orus_ui$OUI$Material$Button$defaultTheme, cr: $orus_io$elm_orus_ui$OUI$Material$Checkbox$defaultTheme, ct: $orus_io$elm_orus_ui$OUI$Material$Color$defaultLightScheme, cD: $orus_io$elm_orus_ui$OUI$Material$Dialog$defaultTheme, cE: $orus_io$elm_orus_ui$OUI$Material$Divider$defaultTheme, eR: 0, hc: $orus_io$elm_orus_ui$OUI$Material$Menu$defaultTheme, cV: $orus_io$elm_orus_ui$OUI$Material$Navigation$defaultTheme, c0: $orus_io$elm_orus_ui$OUI$Material$Progress$defaultTheme, c2: $orus_io$elm_orus_ui$OUI$Material$RadioButton$defaultTheme, c9: $orus_io$elm_orus_ui$OUI$Material$Slider$defaultTheme, dd: $orus_io$elm_orus_ui$OUI$Material$Switch$defaultTheme, df: $orus_io$elm_orus_ui$OUI$Material$Tabs$defaultTheme, dh: $orus_io$elm_orus_ui$OUI$Material$TextField$defaultTheme, dn: $orus_io$elm_orus_ui$OUI$Material$Theme$defaultTypescale};
@@ -15963,7 +15963,7 @@ var $author$project$Main$allVessels = function (model) {
 		function (t) {
 			return A3($author$project$Main$animVessel, t.a3, model, t.bG);
 		},
-		model.S);
+		model.L);
 };
 var $mdgriffith$elm_ui$Internal$Model$unstyled = A2($elm$core$Basics$composeL, $mdgriffith$elm_ui$Internal$Model$Unstyled, $elm$core$Basics$always);
 var $mdgriffith$elm_ui$Element$html = $mdgriffith$elm_ui$Internal$Model$unstyled;
@@ -18841,7 +18841,7 @@ var $orus_io$elm_nats$Nats$Internal$SocketStateCollection$removeByID = F2(
 var $orus_io$elm_nats$Nats$updateSocket = F4(
 	function (_v0, sid, fn, oState) {
 		var state = oState;
-		var _v1 = A2($orus_io$elm_nats$Nats$Internal$SocketStateCollection$findByID, sid, state.Q);
+		var _v1 = A2($orus_io$elm_nats$Nats$Internal$SocketStateCollection$findByID, sid, state.R);
 		if (_v1.$ === 1) {
 			return _Utils_Tuple3(oState, _List_Nil, $elm$core$Platform$Cmd$none);
 		} else {
@@ -18855,7 +18855,7 @@ var $orus_io$elm_nats$Nats$updateSocket = F4(
 					_Utils_update(
 						state,
 						{
-							Q: A2($orus_io$elm_nats$Nats$Internal$SocketStateCollection$removeByID, sid, state.Q)
+							R: A2($orus_io$elm_nats$Nats$Internal$SocketStateCollection$removeByID, sid, state.R)
 						}),
 					msgs,
 					cmd);
@@ -18867,7 +18867,7 @@ var $orus_io$elm_nats$Nats$updateSocket = F4(
 					_Utils_update(
 						state,
 						{
-							Q: A2($orus_io$elm_nats$Nats$Internal$SocketStateCollection$insert, newSocket, state.Q)
+							R: A2($orus_io$elm_nats$Nats$Internal$SocketStateCollection$insert, newSocket, state.R)
 						}),
 					msgs,
 					cmd);
@@ -18884,7 +18884,7 @@ var $orus_io$elm_nats$Nats$handleSubHelper = F3(
 				var socket = sub.b;
 				var props = socket;
 				var onEvent = sub.c;
-				var _v2 = A2($orus_io$elm_nats$Nats$Internal$SocketStateCollection$findByID, props.ad, state.Q);
+				var _v2 = A2($orus_io$elm_nats$Nats$Internal$SocketStateCollection$findByID, props.ad, state.R);
 				if (_v2.$ === 1) {
 					return _Utils_Tuple3(
 						_Utils_update(
@@ -18899,10 +18899,10 @@ var $orus_io$elm_nats$Nats$handleSubHelper = F3(
 										return props.je ? $elm$core$Maybe$Just(props.ad) : $elm$core$Maybe$Just(id);
 									}
 								}(),
-								Q: A2(
+								R: A2(
 									$orus_io$elm_nats$Nats$Internal$SocketStateCollection$insert,
 									A4($orus_io$elm_nats$Nats$Internal$SocketState$init, options, onEvent, socket, state.h6),
-									state.Q)
+									state.R)
 							}),
 						$elm$core$Maybe$Just(props.ad),
 						A2(
@@ -19469,7 +19469,7 @@ var $orus_io$elm_nats$Nats$handleSub = F3(
 								$elm$core$Platform$Cmd$map(cfg.aT))),
 						$orus_io$elm_nats$Nats$Internal$SocketState$finalizeSubscriptions(socket));
 				},
-				nState.Q));
+				nState.R));
 		var sockets = _v6.a;
 		var opsCmds = _v6.b;
 		var _v7 = A2(
@@ -19555,7 +19555,7 @@ var $orus_io$elm_nats$Nats$handleSub = F3(
 		return _Utils_Tuple2(
 			_Utils_update(
 				nState,
-				{Q: finalSockets}),
+				{R: finalSockets}),
 			$elm$core$Platform$Cmd$batch(
 				_Utils_ap(
 					cmds,
@@ -20541,13 +20541,13 @@ var $orus_io$elm_nats$Nats$doUpdateAllSockets = F3(
 		var _v1 = A2(
 			$orus_io$elm_nats$Nats$Internal$SocketStateCollection$mapWithEffect,
 			A2($orus_io$elm_nats$Nats$Internal$SocketState$update, cfg, msg),
-			state.Q);
+			state.R);
 		var sockets = _v1.a;
 		var effects = _v1.b;
 		return _Utils_Tuple3(
 			_Utils_update(
 				state,
-				{Q: sockets}),
+				{R: sockets}),
 			A2($elm$core$List$concatMap, $elm$core$Tuple$first, effects),
 			$elm$core$Platform$Cmd$batch(
 				A2(
@@ -20576,7 +20576,7 @@ var $orus_io$elm_nats$Nats$doUpdateSocket = F4(
 	function (cfg, sid, msg, _v0) {
 		var ncfg = cfg;
 		var state = _v0;
-		var _v1 = A4($orus_io$elm_nats$Nats$Internal$SocketStateCollection$update, cfg, sid, msg, state.Q);
+		var _v1 = A4($orus_io$elm_nats$Nats$Internal$SocketStateCollection$update, cfg, sid, msg, state.R);
 		var sockets = _v1.a;
 		var _v2 = _v1.b;
 		var msgs = _v2.a;
@@ -20584,7 +20584,7 @@ var $orus_io$elm_nats$Nats$doUpdateSocket = F4(
 		return _Utils_Tuple3(
 			_Utils_update(
 				state,
-				{Q: sockets}),
+				{R: sockets}),
 			msgs,
 			$elm$core$Platform$Cmd$batch(
 				A2($elm$core$List$map, ncfg.b$.hT, ops)));
@@ -20816,12 +20816,14 @@ var $author$project$Main$handleFlow = F2(
 						$mdgriffith$elm_animator$Animator$millis(2000),
 						updateChambers(cmd.av),
 						model.a_),
-					G: 'Handling flow for ' + cmd.av
+					G: 'Handling flow for ' + (cmd.av + (' ' + $elm$core$String$fromInt(
+						$elm$core$List$length(
+							vmoves(model.L)))))
 				}),
 			$andrewMacmurray$elm_delay$Delay$sequence(
 				A2(
 					$elm$core$List$append,
-					vmoves(model.S),
+					vmoves(model.L),
 					_List_fromArray(
 						[
 							_Utils_Tuple2(
@@ -20857,10 +20859,10 @@ var $author$project$Main$handleGCD = F2(
 			function (v) {
 				return v.bv;
 			},
-			model.S) ? model.S : A2(
+			model.L) ? model.L : A2(
 			$author$project$Main$startNext,
 			(cmd.av === 'GCD-05') ? 1 : 0,
-			model.S);
+			model.L);
 		var seq = A2(
 			$elm$core$List$map,
 			function (vid) {
@@ -20877,7 +20879,7 @@ var $author$project$Main$handleGCD = F2(
 		return _Utils_Tuple2(
 			_Utils_update(
 				model,
-				{S: vlist, G: cmd.fq + (' for ' + cmd.av)}),
+				{L: vlist, G: cmd.fq + (' for ' + cmd.av)}),
 			$andrewMacmurray$elm_delay$Delay$sequence(
 				A2(
 					$elm$core$List$append,
@@ -21069,7 +21071,7 @@ var $author$project$Main$update = F2(
 			case 1:
 				var license = msg.a;
 				var millis = msg.b;
-				var _v1 = A2($author$project$Main$nextTransition, license, model.S);
+				var _v1 = A2($author$project$Main$nextTransition, license, model.L);
 				if (_v1.$ === 1) {
 					return _Utils_Tuple3(
 						_Utils_update(
@@ -21090,7 +21092,7 @@ var $author$project$Main$update = F2(
 						_Utils_update(
 							model,
 							{
-								S: A2($author$project$Main$adjustSequence, license, model.S),
+								L: A2($author$project$Main$adjustSequence, license, model.L),
 								_: A3(
 									$mdgriffith$elm_animator$Animator$go,
 									$mdgriffith$elm_animator$Animator$millis(millis),
@@ -21109,12 +21111,12 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							S: A2(
+							L: A2(
 								$elm$core$List$filter,
 								function (v) {
 									return !_Utils_eq(v.a3, id);
 								},
-								model.S),
+								model.L),
 							G: 'Finished \"' + (id + '\"'),
 							_: A3(
 								$mdgriffith$elm_animator$Animator$go,
@@ -21193,9 +21195,9 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							S: A2(
+							L: A2(
 								$elm$core$List$append,
-								model.S,
+								model.L,
 								$elm$core$List$singleton(vessel)),
 							G: 'Starting vessel \"' + (license + '\"'),
 							dp: model.dp + 1,

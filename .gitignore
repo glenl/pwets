@@ -2,3 +2,7 @@
 elm-stuff
 # elm-repl generated files
 repl-temp-*
+doc/.asciidoctor
+doc/pwets-elm.html
+doc/pwets-elm.pdf
+images/diag-pikchr-*
